@@ -8,19 +8,18 @@
 </head>
 <body>
 <div class="container mt-4">
-    <h1>Weights</h1>
-    <table class="table">
+    <table class="table table-bordered">
         <thead>
             <tr>
-                <th>Name</th>
-                <th>Weight</th>
+                <th scope="col">Name</th>
+                <th scope="col">Weight</th>
             </tr>
         </thead>
         <tbody>
             @foreach($weights as $weight)
             <tr>
-                <td>{{ $weight->name }}</td>
-                <td>{{ $weight->weight }}</td>
+            <td scope="row">{{ $weight->name }}</td>
+            <td scope="row">{{ number_format($weight->weight, 1) }}</td>
             </tr>
             @endforeach
         </tbody>

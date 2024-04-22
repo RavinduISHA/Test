@@ -18,15 +18,20 @@
     <div class="container mt-4">
     <form method="POST" action="{{ route('weight') }}">
         @csrf
-        <div class="form-group">
-            <label for="name">Name:</label>
-            <input type="text" class="form-control" id="name" name="name">
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Name</label>
+            <div class="col-md-4">
+            <input type="text" class="form-control" id="email" placeholder="Name">
+            </div>
         </div>
-        <div class="form-group">
-            <label for="weight">Weight:</label>
-            <input type="number" class="form-control" id="weight" name="weight">
+        <div class="form-group row mt-4">
+            <label class="col-sm-2 col-form-label">Weight</label>
+            <div class="col-md-4">
+            <input type="decimal" class="form-control" id="weight" placeholder="weight">
+            </div>
         </div>
-        <button type="submit" class="btn btn-primary mt-4">Save</button>
+
+        <button type="submit" class="btn btn-primary mt-4">Submit</button>
     </form>
 </div>
 

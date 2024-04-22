@@ -9,7 +9,7 @@ class WeightController extends Controller
 {
     public function index(Request $req, Weight $user){
         $user = $user::create([
-           'name' => $req->name,
+           "name" => $req->name,
            "weight" => $req->weight
         ]);
         
